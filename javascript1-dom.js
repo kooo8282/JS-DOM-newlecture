@@ -17,7 +17,20 @@ window.addEventListener("load", function(){
         for(i=0; i<inputs.length; i++)
             inputs[i].parentElement.parentElement.remove();
     };
-    swapBtn.onclick = function(){};
+    swapBtn.onclick = function(){
+        var inputs = tbody.querySelectorAll("input[type='checkbox']:checked")
+        if(inputs.length!=2){
+            alert("you must select 2 itmes.")
+            return;
+        }
+        var trs = [];
+        for (i=0; i<inputs.length;i++)
+            trs.push(inputs[i].parentElement.parentElement);      
+        
+        var cloneNode = trs[0].cloneNode(true);
+        trs[1].replaceWith(cloneNode);
+        trs[0].replaceWith(trs[1]);
+    };
 
 })
 
