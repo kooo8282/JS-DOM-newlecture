@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript1-dom.js"></script>
+</head>
+<body>
+    <section id="section9">
+        <h1>EX9-overall select, delete, and position exchange</h1>
+        <input type="button" class="del-btn" value="delete">
+        <input type="button" class="swap-btn" value="swap">
+        <template>
+            <tr>
+                <td></td>
+                <td><a href=""></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </template>
+        <table border="2" class="notice-table">
+            <thead>
+                <tr>
+                    <td><input type="checkbox" class="overall-checkbox"></td>
+                    <td>number</td>
+                    <td>title</td>
+                    <td>date</td>
+                    <td>writer</td>
+                    <td>hit</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1</td>
+                    <td><a href="1">what is javascript</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>2</td>
+                    <td><a href="2">should have strong base</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>3</td>
+                    <td><a href="3">You Tube ~~</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>4</td>
+                    <td><a href="4">I need more hits</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="section8">
+        <h1>EX8-node insert and change</h1>
+        <input type="button" class="up-btn" value="up">
+        <input type="button" class="down-btn" value="down">
+        <template>
+            <tr>
+                <td></td>
+                <td><a href=""></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </template>
+        <table border="2" class="notice-table">
+            <thead>
+                <tr>
+                    <td>number</td>
+                    <td>title</td>
+                    <td>date</td>
+                    <td>writer</td>
+                    <td>hit</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: lightblue;">
+                    <td>1</td>
+                    <td><a href="1">what is javascript</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="2">should have strong base</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="3">You Tube ~~</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="4">I need more hits</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="section7">
+        <h1>EX7-node clone and tempalte tag</h1>
+        <input type="button" class="clone-btn" value="clone">
+        <input type="button" class="temp-clone-btn" value="template clone">
+        <template>
+            <tr>
+                <td></td>
+                <td><a href=""></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </template>
+        <table border="2" class="notice-table">
+            <thead>
+                <tr>
+                    <td>number</td>
+                    <td>title</td>
+                    <td>date</td>
+                    <td>writer</td>
+                    <td>hit</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="1">what is javascript</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="2">should have strong base</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <section id="section4">
+        <h1>Ex4 : selectors using childNodes</h1>
+        <div class="box">
+            <input>
+            <input>
+        </div>
+    </section>
+    <hr />
+
+    <section id="section3">
+        <h1>Ex3 : selectors API Level 1</h1>
+        <div>
+            <input class="txt-x" type="text" value="0" dir="rtl"/>
+            +
+            <input class="txt-y" type="text" value="0" dir="rtl"/>
+            <input class="btn-add" type="button" value="=" />
+            <input class="txt-sum" type="text" value="0" readonly dir="rtl" />
+        </div>
+    </section>
+    <hr />
+
+    <section>
+        <h1>Ex1 : cal. program</h1>
+        <div>
+            <input id="txt-x" type="text" value="0" dir="rtl"/>
+            +
+            <input id="txt-y" type="text" value="0" dir="rtl"/>
+            <input id="add" type="button" value="=" />
+            <input id="txt-sum" type="text" value="0" readonly dir="rtl" />
+        </div>
+    </section>
+    <hr />
+
+    <section id="sec1">
+        <h1>Ex2 : element selector id & tag name</h1>
+        <ul>
+            <li>번호1</li>
+            <li>번호2</li>
+            <li>번호3</li>
+        </ul>
+    </section>
+    <hr />
+
+</body>
+</html>
