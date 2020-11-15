@@ -1,3 +1,64 @@
+//EX10 - sort based on a column selected
+window.addEventListener("load", function(){
+    var notices = [
+        {"id":1, "title":"가가멜..ㅜㅜ..", "regDate":"2019-02-05", "writerId":"newlec", "hit":2},
+        {"id":2, "title":"자바스크립트란..", "regDate":"2019-02-02", "writerId":"newlec", "hit":0},
+        {"id":3, "title":"기본기가 튼튼해야....", "regDate":"2019-02-01", "writerId":"newlec", "hit":1},
+        {"id":4, "title":"하하 조회수가 ㅜㅜ..", "regDate":"2019-01-25", "writerId":"newlec", "hit":0}
+    ];
+    
+    var section = document.querySelector("#section10");
+    var noticeTable = section.querySelector(".notice-table");
+    var tbody = noticeTable.querySelector("tbody");
+    var titleTd = section.querySelector(".title");
+
+    var bindData = function(){
+        var template = section.querySelector("template")
+        for (i=0; i<notices.length; i++){
+            var cloneNode = document.importNode(template.content, true);
+            var tds = cloneNode.querySelectorAll("td");
+            tds[0].innerText = notices[i].id;
+            var aNode = tds[1].children[0]
+            aNode.href = notices[i].id;
+            aNode.innerText = notices[i].title;
+            tds[2].innerText = notices[i].regDate;
+            tds[3].innerText = notices[i].writerId;
+            tds[4].innerText = notices[i].hit;
+
+            tbody.appendChild(cloneNode);
+        }        
+    };
+    bindData();
+
+    var titleSorted = false;
+
+    titleTd.onclick = function(){
+        tbody.innerHTML = "";
+        if(!titleSorted){
+            // array sort : .title
+            notices.sort(function(a, b){
+                if (a.title < b.title){
+                    return -1;
+                }else if (a.title > b.title){
+                    return 1;
+                }else{
+                    return 0;
+                }
+            });
+            // sorting only at first time
+            titleSorted = true;
+        }
+        // after first sorting, reversing items
+        else{
+            notices.reverse();
+        }
+
+        bindData();
+    };
+
+
+});
+
 //EX9-overall select, delete, and position exchange
 window.addEventListener("load", function(){
     var section = document.querySelector("#section9");
