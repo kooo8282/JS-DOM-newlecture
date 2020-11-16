@@ -164,6 +164,61 @@ window.addEventListener("load",function(){
     }
 })
 
+// EX 6
+window.addEventListener("load", function(){
+    var section = document.querySelector("#section6");
+    var titleInput = section.querySelector(".title-input");
+    var menuListUl = section.querySelector(".menu-list");
+    var addButton = section.querySelector(".add-button");
+    var delButton = section.querySelector(".del-button");
+    
+    addButton.onclick = function(){
+        var title = titleInput.value;
+        var html = '<a ref="">' + title + '</a>';
+		var liNode = document.createElement("li");
+		liNode.innerHTML = html;
+		menuListUl.append(liNode);
+
+        // menuListUl.innerHTML += '<li><a ref="">'+title+'</a></li>'
+        
+        // var txtNode = document.createTextNode(title);
+        // var aNode = document.createElement("a");
+        // aNode.href = "";
+        // // <a>...</a>
+        // aNode.appendChild(txtNode);
+        // var liNode = document.createElement("li");
+        // // <li><a>...</a></li>
+        // liNode.appendChild(aNode);
+        // menuListUl.appendChild(liNode);
+    }
+
+    delButton.onclick = function(){
+    //    var txtNode = menuListUl.childNodes[0];
+        var liNode = menuListUl.children[0];
+        // menuListUl.removeChild(liNode);
+        liNode.remove();
+    }
+})
+
+// EX 5
+window.addEventListener("load", function(){
+    var section = document.querySelector("#section5");
+    
+    var srcInput = section.querySelector(".src-input");
+    var changeBtn = section.querySelector(".change-btn");
+    var img = section.querySelector(".img");
+    var imgSelect = section.querySelector(".img-select")
+    var colorInput = section.querySelector(".color-input")
+
+    changeBtn.onclick = function(){
+        // img.src = "img/" + srcInput.value;
+        img.src = "img/" + imgSelect.value;        
+        
+        // img.style["border-color"] = colorInput.value;
+        img.style.borderColor = colorInput.value;
+    }
+})
+
 //Ex 4: selector with childNodes
 window.addEventListener("load", function(){
     var section4 = document.querySelector("#section4");
