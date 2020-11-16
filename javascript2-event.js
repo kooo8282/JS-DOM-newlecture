@@ -1,3 +1,41 @@
+// Ex 4 - multi-button
+window.addEventListener("load", function(){
+    var section = document.querySelector("#section4");    
+    var tbody = section.querySelector(".notice-table tbody");
+    tbody.onclick = function(e){
+        var target = e.target;
+        if(target.nodeName != "INPUT"){return;}
+        if(target.classList.contains("sel-btn")){
+            var tr = target.parentElement;
+            for(; tr.nodeName!="TR";tr=tr.parentElement);
+            tr.style.background = "yellow";
+        }else if(target.classList.contains("edit-btn")){
+
+        }else if(target.classList.contains("del-btn")){
+
+        }
+    }    
+});
+
+// Ex 3 - stop bubbling
+window.addEventListener("load", function(){
+    var section = document.querySelector("#section3");
+    var imgList = section.querySelector(".img-list");
+    var addBtn = section.querySelector(".add-btn")
+    var currentImg = section.querySelector(".current-img");
+
+    imgList.onclick = function(e){                
+        if(e.target.nodeName != "IMG") return;        
+        currentImg.src = e.target.src;        
+    };
+    addBtn.onclick = function(e){        
+        e.stopPropagation();        
+        var img = document.createElement("img");
+        img.src = "img/img3.jpg";
+        currentImg.insertAdjacentElement("afterend", img);
+    };    
+});
+
 // Ex 2-1 - delete row
 window.addEventListener("load", function(){
     var section = document.querySelector("#section2-1");    
