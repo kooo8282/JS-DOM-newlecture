@@ -1,3 +1,21 @@
+// EX 6 - MouseEvent Position
+window.addEventListener("load", function(){
+    var section = document.querySelector("#section6");
+    var container = section.querySelector(".container");
+    var box = section.querySelector(".box");
+
+    container.onclick = function(e){
+        //e.x, e.y / e.offsetX,e.offsetY/ e.clientX,e.clientY
+        console.log(e.x, e.y)
+        console.log(e.clientX, e.clientY)
+        console.log(e.pageX, e.pageY)
+        console.log(e.offsetX, e.offsetY)
+        box.style.position = "absolute";
+        box.style.left = e.pageX+"px";
+        box.style.top = e.pageY+"px";
+    };
+});
+
 // EX 5 - Trigger
 window.addEventListener("load", function(){
     var section = document.querySelector("#section5");
