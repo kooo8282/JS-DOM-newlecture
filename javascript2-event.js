@@ -1,7 +1,7 @@
 // EX 9 - MouseEvent Position: moving 3 boxes By page-offset-left
 window.addEventListener("load", function(){
     var section = document.querySelector("#section9");
-    var container = section.querySelector(".container");
+    var container = section.querySelector(".container2");
     var status = section.querySelector(".status");
     var dragging = false;
     var offset = {x:0,y:0}
