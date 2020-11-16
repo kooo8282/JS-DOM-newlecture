@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript2-event.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="javascript1-dom.html">1. DOM Programming Examples</a>
+        <span>|</span>
+        <a href="javascript2-event.html">2. DOM Event Programming Examples</a>
+    </nav>
+    <hr />
+
+    <section id="section1-1">
+        <h1>EX 1-1 delete row</h1>       
+        <table border="2" class="notice-table">
+            <thead>
+                <tr>                    
+                    <td>number</td>
+                    <td>title</td>
+                    <td>date</td>
+                    <td>writer</td>
+                    <td>hit</td>
+                    <td>control</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>                    
+                    <td>1</td>
+                    <td><a href="1">what is javascript</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>2</td>
+                    <td><input class="del-btn" type="button" value="delete"></td>
+                </tr>
+                <tr>                    
+                    <td>2</td>
+                    <td><a href="2">should have strong base</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>29</td>
+                    <td><input class="del-btn" type="button" value="delete"></td>
+                </tr>
+                <tr>                    
+                    <td>3</td>
+                    <td><a href="3">You Tube ~~</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>20</td>
+                    <td><input class="del-btn" type="button" value="delete"></td>
+                </tr>
+                <tr>                    
+                    <td>4</td>
+                    <td><a href="4">I need more hits</a></td>
+                    <td>2019-01-25</td>
+                    <td>koo</td>
+                    <td>100</td>
+                    <td><input class="del-btn" type="button" value="delete"></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+    </section>
+    
+    <section id="section1">
+        <h1>Ex 1 - Show Image selected: event target</h1>
+        <div>
+            <img src="img/img1.jpg" class="img" style="height: 100px;">
+            <img src="img/img2.jpg" class="img" style="height: 100px;">
+            <img src="img/img3.jpg" class="img" style="height: 100px;">
+        </div>
+        <div>
+            <img class="current-img" src="img/img1.jpg" style="border: 2px solid red;">
+        </div>
+        <hr>
+    </section>
+</body>
+</html>
