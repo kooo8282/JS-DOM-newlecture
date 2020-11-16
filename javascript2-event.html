@@ -13,6 +13,26 @@
         <a href="javascript2-event.html">2. DOM Event Programming Examples</a>
     </nav>
     <hr />
+    <section id="section5">
+        <style>
+            .file-button{
+                display: none;
+            }
+            .file-trigger-button{
+                background: tomato;
+                border: 1px solid lightgreen;
+                border-radius: 5px;
+                padding: 5px 10px;
+                color: white;
+                cursor: pointer;
+            }
+            .file-trigger-button:hover{
+                background: limegreen;
+            }
+        </style>
+        <input type="file" class="file-button">
+        <span class="file-trigger-button">File select</span>
+    </section>
 
     <section id="section4">
         <h1>EX 4 - multi-button event</h1>       
@@ -35,9 +55,9 @@
                     <td>koo</td>
                     <td>2</td>
                     <td>
-                        <input class="sel-btn" type="button" value="select">
-                        <input class="edit-btn" type="button" value="modify">
-                        <input class="del-btn" type="button" value="delete">
+                        <a href="" class="sel-btn">select</a>
+                        <a href="" class="edit-btn">edit</a>
+                        <a href="" class="del-btn">delete</a> 
                     </td>
                 </tr>
                 <tr>                    

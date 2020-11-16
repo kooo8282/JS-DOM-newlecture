@@ -1,10 +1,27 @@
+// EX 5 - Trigger
+window.addEventListener("load", function(){
+    var section = document.querySelector("#section5");
+    var fileBtn = section.querySelector(".file-button");
+    var fileTriggerBtn = section.querySelector(".file-trigger-button");
+
+    fileTriggerBtn.onclick = function(){
+        var event = new MouseEvent("click",{
+            'view':window,
+            'bubbles':true,
+            'cancelable':true
+        });
+        fileBtn.dispatchEvent(event);
+    };
+})
+
 // Ex 4 - multi-button
 window.addEventListener("load", function(){
     var section = document.querySelector("#section4");    
     var tbody = section.querySelector(".notice-table tbody");
     tbody.onclick = function(e){
+        e.preventDefault();
         var target = e.target;
-        if(target.nodeName != "INPUT"){return;}
+        if(target.nodeName != "A"){return;}
         if(target.classList.contains("sel-btn")){
             var tr = target.parentElement;
             for(; tr.nodeName!="TR";tr=tr.parentElement);
